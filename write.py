@@ -4,7 +4,7 @@ s=turtle.Screen()
 s.setup(240,320)
 s.bgcolor('black')
 s.colormode(255)
-def turtlefun(tempx, feelsx, pricex):
+def turtlefun(tempx, feelsx, pricex, datex):
     #Change color based on temperature
     t.up()
     t.setx(-85)
@@ -66,4 +66,16 @@ def turtlefun(tempx, feelsx, pricex):
     t.forward(12)
     t.down()
     t.write(pricex, font=("Times", 18, "normal"))
-    
+    t.up()
+    t.setx(-85)
+    t.sety(120)
+    t.right(90)
+    t.forward(120)
+    t.left(90)
+    t.down()
+    t.color('orange')
+    t.write('Date:', font=("Times", 18, "normal"))
+    t.up()
+    t.forward(55)
+    t.down()
+    t.write(datex, font=("Times", 18, "normal"))

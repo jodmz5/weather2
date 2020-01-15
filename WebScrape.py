@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 from write import turtlefun
+from datetime import date
 
 weatherURL="https://weather.com/weather/today/l/dfce35747a4e6e70de0e4883cfaecf6ae21820b2979ba9e1e3e16192cabdbdef"
 pageweather=requests.get(weatherURL)
@@ -28,4 +29,8 @@ priceUkg1=(priceUlbs*(1/0.453592))
 priceUkg=round(priceUkg1,2)
 print(priceUkg)
 
-turtlefun(tempreal,tempfeels,priceUkg)
+today=date.today()
+d1=today.strftime("%m/%d/%Y")
+print(d1)
+
+turtlefun(tempreal,tempfeels,priceUkg,d1)
